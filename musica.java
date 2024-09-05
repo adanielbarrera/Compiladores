@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class AnaLex {
+public class musica {
 
     static int com, est;
     static int c;
