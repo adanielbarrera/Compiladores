@@ -105,6 +105,9 @@ static int com, est;
     public static int diagrama() {
         a_a = a_i;
         switch (com) {
+            case(0):
+            com = 11;
+            break;
         }
         return com;
     }
@@ -112,7 +115,6 @@ static int com, est;
     public static String token() {
         while (true) {
             switch (est) {
-                
             }
         }
     }

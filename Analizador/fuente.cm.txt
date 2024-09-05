@@ -1,0 +1,27 @@
+variables
+        hola, adios : entero
+        nada : flotante -> 25.13
+        hola: entero..30
+        a : flotante..50
+        hola : cadena(10)
+        b: cadena(5)..200
+fin_variables
+
+principal
+    b<- b*c
+    si((adios>nada) y (5=6.4))entonces
+        b<-2-3
+    otro
+        d<-d
+    fin_si
+    mientras(a>b)
+        a<-b
+    fin_mientras
+    repite
+        a<-b
+    hasta(a>b)
+fin_pricipal
+
+funcion entero hola(enetero x, flotante y)
+    hola<- x*y
+fin_funcion
