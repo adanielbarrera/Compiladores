@@ -1,6 +1,3 @@
-cls
-dir
-pause
-pause
-javac *.java
-pause
+@Echo off
+del tabla_resultado.cm1
+java AnaLex angel

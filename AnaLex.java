@@ -97,8 +97,11 @@ public class AnaLex {
             est = 0;
             com = 0;
             miToken = token();
-            System.out.println("Token= " + miToken + " Lexema = " + lex);
-            pausa();
+            if (!miToken.equals("nosirve")) {
+                creaEscribeArchivo(xArchivo("tabla_resultado.cm1"), miToken);
+                creaEscribeArchivo(xArchivo("tabla_resultado.cm1"), lex);
+                creaEscribeArchivo(xArchivo("tabla_resultado.cm1"), Renglon + "");
+            }
         }
         System.out.println("Analisis Lexicografico correcto");
     }
@@ -133,7 +136,7 @@ public class AnaLex {
             case 48:
                 rut_error();
                 break;
-        
+
             default:
                 break;
         }
