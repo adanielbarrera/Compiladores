@@ -1,3 +1,3 @@
 @Echo off
-del tabla_resultado.cm1
+del %.cm1
 java musica %1

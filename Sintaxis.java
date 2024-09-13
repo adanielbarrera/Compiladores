@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
  * RD
  */
 
-public class RD {
+public class Sintaxis {
     static int posicion = 0;
     static String cabeza, entrada;
     static String lex, renglon;
@@ -48,8 +48,7 @@ public class RD {
     }
 
     public static void rut_error() {
-        System.out.println("\n\nError sintactico(" + renglon + ")):  compilacion terminada, en el caracter["
-                + cabeza + "] !!!!\n");
+        System.out.println("\n\nError sintactico !!!!\n");
         System.exit(4);
     }
 

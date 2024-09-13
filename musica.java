@@ -111,9 +111,9 @@ public class musica {
                 creaEscribeArchivo(xArchivo(salida), Renglon + "");
             }
         }
-        creaEscribeArchivo(xArchivo("tabla_resultado.cm1"),"fin");
-        creaEscribeArchivo(xArchivo("tabla_resultado.cm1"),"fin");
-        creaEscribeArchivo(xArchivo("tabla_resultado.cm1"),"666");
+        creaEscribeArchivo(xArchivo(salida),"fin");
+        creaEscribeArchivo(xArchivo(salida),"fin");
+        creaEscribeArchivo(xArchivo(salida),"666");
         System.out.println("Analisis Lexicografico correcto");
     }
 
