@@ -1,3 +1,4 @@
+
 static int com, est;
     static int c;
     static int Renglon;
