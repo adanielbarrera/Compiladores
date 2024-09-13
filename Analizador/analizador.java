@@ -106,8 +106,8 @@ static int com, est;
         a_a = a_i;
         switch (com) {
             case(0):
-            com = 11;
-            break;
+                com = 11;
+                break;
         }
         return com;
     }

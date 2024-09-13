@@ -1,4 +1,11 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 
 public class musica {
 
@@ -11,7 +18,7 @@ public class musica {
     static int a_a = 0;
     static boolean fin_archivo = false;
     static String lex, miToken;
-    static String entrada;
+    static String entrada, salida;
 
     public static void rut_error() {
         System.out.println("\n\nError Lexicografico(" + Renglon + ")):  compilacion terminada, en el caracter["
@@ -85,6 +92,7 @@ public class musica {
         }
 
         entrada = args[0] + ".cm";
+        salida = args[0] + ".cm1";
 
         if (!xArchivo(entrada).exists()) {
             System.err.println("Error: el archivo " + entrada + " no existe.");
@@ -98,11 +106,14 @@ public class musica {
             com = 0;
             miToken = token();
             if (!miToken.equals("nosirve")) {
-                creaEscribeArchivo(xArchivo("tabla_resultado.cm1"), miToken);
-                creaEscribeArchivo(xArchivo("tabla_resultado.cm1"), lex);
-                creaEscribeArchivo(xArchivo("tabla_resultado.cm1"), Renglon + "");
+                creaEscribeArchivo(xArchivo(salida), miToken);
+                creaEscribeArchivo(xArchivo(salida), lex);
+                creaEscribeArchivo(xArchivo(salida), Renglon + "");
             }
         }
+        creaEscribeArchivo(xArchivo("tabla_resultado.cm1"),"fin");
+        creaEscribeArchivo(xArchivo("tabla_resultado.cm1"),"fin");
+        creaEscribeArchivo(xArchivo("tabla_resultado.cm1"),"666");
         System.out.println("Analisis Lexicografico correcto");
     }
 
@@ -566,4 +577,6 @@ public class musica {
         }
         return x;
     }
+    
 }
+
