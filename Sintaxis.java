@@ -28,7 +28,7 @@ public class Sintaxis {
             posicion = posicion + linea.length() + 2;
             renglon = linea;
             fr.close();
-            System.out.println(".");
+            //System.out.println(".");
         } catch (IOException e) {
             System.out.println("Errorsote");
         }
