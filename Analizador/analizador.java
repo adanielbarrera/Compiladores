@@ -148,13 +148,8 @@ static int com, est;
                 return false;
 
         }
+        
     }
 
-    public static String obtenLex() {
-        String x = "";
-        for (int i = a_i; i < a_a; i++) {
-            x = x + linea[i];
-        }
-        return x;
-    }
+
 }

@@ -19,6 +19,7 @@ public class musica {
     static boolean fin_archivo = false;
     static String lex, miToken;
     static String entrada, salida;
+    static String pr[] = new String[4];
 
     public static void rut_error() {
         System.out.println("\n\nError Lexicografico(" + Renglon + ")):  compilacion terminada, en el caracter["
@@ -36,6 +37,15 @@ public class musica {
             fin_archivo = true;
             return 255;
         }
+    }
+
+    public static String reservada(String x) {
+        for (int i = 0; i < pr.length; i++) {
+            if (pr[i].equals(x)) {
+                return (x);
+            }
+        }
+        return ("id");
     }
 
     public static String pausa() {
@@ -85,7 +95,10 @@ public class musica {
     }
 
     public static void main(String[] args) {
-
+        pr[0] = "s";
+        pr[1] = "w";
+        pr[2] = "e";
+        pr[3] = "f";
         if (args.length == 0) {
             System.err.println("Error: falta archivo:");
             System.exit(4);
@@ -111,9 +124,9 @@ public class musica {
                 creaEscribeArchivo(xArchivo(salida), Renglon + "");
             }
         }
-        creaEscribeArchivo(xArchivo(salida),"fin");
-        creaEscribeArchivo(xArchivo(salida),"fin");
-        creaEscribeArchivo(xArchivo(salida),"666");
+        creaEscribeArchivo(xArchivo(salida), "fin");
+        creaEscribeArchivo(xArchivo(salida), "fin");
+        creaEscribeArchivo(xArchivo(salida), "666");
         System.out.println("Analisis Lexicografico correcto");
     }
 
@@ -189,7 +202,7 @@ public class musica {
                     a_a--;
                     lex = obtenLex();
                     a_i = a_a;
-                    return ("id");
+                    return (reservada(lex));
                 case 4:
                     c = lee_car();
                     if (esDigito(c)) {
@@ -363,7 +376,7 @@ public class musica {
                     a_a--;
                     lex = obtenLex();
                     a_i = a_a;
-                    return ("may");
+                    return (">");
                 case 25:
                     lex = obtenLex();
                     a_i = a_a;
@@ -372,7 +385,7 @@ public class musica {
                     a_a--;
                     lex = obtenLex();
                     a_i = a_a;
-                    return ("men");
+                    return ("<");
                 case 27:
                     c = lee_car();
                     if (esDelim(c)) {
@@ -501,11 +514,11 @@ public class musica {
                 case 42:
                     lex = obtenLex();
                     a_i = a_a;
-                    return ("pa");
+                    return ("(");
                 case 43:
                     lex = obtenLex();
                     a_i = a_a;
-                    return ("pc");
+                    return (")");
                 case 44:
                     lex = obtenLex();
                     a_i = a_a;
@@ -577,6 +590,5 @@ public class musica {
         }
         return x;
     }
-    
-}
 
+}

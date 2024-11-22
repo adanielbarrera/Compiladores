@@ -5,7 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * RD
+ * ----------Recursivo descendente----------
+ * este es un programa recursivo para revisar la sintaxis de un programa fuente
+ * Entrada: tabla de token y lexemas generado por el analizador lexicografico
+ * Salida: mensaje de error o de aceptacion
  */
 
 public class Sintaxis {
