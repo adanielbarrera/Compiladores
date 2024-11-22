@@ -205,7 +205,7 @@ public class PFAnalexMonitor {
 					a_a--;
 					LEX = obten_lex(a_i, a_a);
 					a_i = a_a;
-					return (LEX);
+					return ("id");
 				case 4:
 					c = lee_car();
 					if (es_digito(c))
@@ -582,11 +582,6 @@ public class PFAnalexMonitor {
 
 	public static void main(String[] argumento) {
 
-		pr[0] = "si";
-		pr[1] = "entonces";
-		pr[2] = "finsi";
-		pr[3] = "mientras";
-		pr[4] = "finmientras";
 
 		if (argumento.length == 0) {
 			System.out.println("ERROR: Falta el archivo....");
